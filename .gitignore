@@ -1,0 +1,54 @@
+# Composer Vendor Directory #
+#############################
+vendor/
+
+# Hidden Files #
+################
+.env
+
+
+# NPM Modules #
+###############
+node_modules/
+
+# Webroot #
+###########
+!web/
+
+web/*
+!web/wp-content
+web/wp-content/themes/*
+web/wp-content/plugins/*
+!web/wp-config.php
+
+!web/wp-content/themes
+
+# Packages #
+############
+*.7z
+*.dmg
+*.gz
+*.bz2
+*.iso
+*.jar
+*.rar
+*.tar
+*.zip
+*.tgz
+
+# Logs and databases #
+######################
+*.log
+*.sql
+
+# OS generated files #
+######################
+.DS_Store*
+ehthumbs.db
+Icon?
+Thumbs.db
+._*
+
+# SASS #
+##########
+.sass-cache

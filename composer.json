@@ -1,0 +1,69 @@
+{
+  "name": "Luis Personal Site",
+  "description": "",
+  "version": "0.1.0",
+  "type": "project",
+  "keywords": [],
+  "minimum-stability": "dev",
+  "authors": [
+    {
+      "name": "Luis Delacruz",
+      "email": "luis@luisdelacruz.io",
+      "homepage": "https://luisdelacruz.io"
+    },
+    {
+      "name": "Bruno Melofiro",
+      "email": "bruno@brunomelofiro.com",
+      "homepage": "https://brunomelofiro.com"
+    }
+  ],
+  "repositories": [
+    {
+      "type": "composer",
+      "url": "https://wpackagist.org"
+    },
+    {
+      "type": "package",
+      "package": {
+        "name": "wordpress/wordpress",
+        "version": "4.8.1",
+        "dist": {
+          "url": "https://github.com/WordPress/WordPress/archive/4.8.1.zip",
+          "type": "zip"
+        },
+        "source": {
+          "url": "git@github.com:WordPress/WordPress.git",
+          "type": "git",
+          "reference": "4.8.1"
+        },
+        "type": "wordpress-core",
+        "require": {
+          "johnpbloch/wordpress-core-installer": "~0.1"
+        },
+        "extra": {
+          "wordpress-install-dir": "web/wp"
+        }
+      }
+    }
+  ],
+  "require": {
+    "php": ">=5.6",
+    "composer/installers": "~1.0",
+    "wordpress/wordpress": "^4.8.1"
+  },
+  "config": {
+    "vendor-dir": "vendor",
+    "preferred-install": "dist",
+    "secure-http": false
+  },
+  "extra": {
+    "installer-paths": {
+      "web/wp-content/plugins/{$name}/": [
+        "type:wordpress-plugin"
+      ],
+      "web/wp-content/themes/{$name}/": [
+        "type:wordpress-theme"
+      ]
+    }
+  }
+}
